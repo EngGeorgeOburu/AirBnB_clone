@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Moule for the state
+"""
 
 from models.base_model import BaseModel
 

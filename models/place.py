@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Module for place model
+"""
+
 
 from models.base_models import BaseModel
 
@@ -6,6 +10,7 @@ class Place(BaseModel):
     """
     Class place that inherits from BaseModel
     """
+
     def __init__(self, *args, **kwargs):
         """
         Initializes the place instance
