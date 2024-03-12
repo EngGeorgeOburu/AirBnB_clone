@@ -3,6 +3,7 @@
 import cmd
 import models
 
+
 class HBNBCommand(cmd.Cmd):
     """Command interpretor class."""
     prompt = "(hbnb) "
@@ -23,6 +24,7 @@ class HBNBCommand(cmd.Cmd):
     def d0_empty(self):
         """ Do nothing if the empty command is passed."""
         pass
+
     def do_create(self, arg):
         """Create a new instance of BaseModel and then saves it."""
         args = arg.split()
@@ -31,10 +33,10 @@ class HBNBCommand(cmd.Cmd):
             return
         if args[0] not in models.classes:
             print("** Class doesn't exist **")
-            return 
+            return
 
         new_instance = models.classes[args[0]]()
-        new_instance.save ()
+        new_instance.save()
         print(new_instance.id)
 
     def do_show(self, arg):
@@ -97,8 +99,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         if args[0] not in models.classes:
-             print("** class doesn't exist **")
-             return
+            print("** class doesn't exist **")
+            return
         if len(args) < 2:
             print("** instance id is missing **")
             return
@@ -115,6 +117,7 @@ class HBNBCommand(cmd.Cmd):
             return
         setattr(models.storage.all()[key], args[2], args[3])
         models.storage.all()[key].save()
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
