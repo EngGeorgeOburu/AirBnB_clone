@@ -7,6 +7,7 @@ import unittest
 from models.base_model import BaseModel
 from models.user import User
 
+
 class TestUser(unittest.TestCase):
     """
     Test case for the User class
@@ -64,6 +65,7 @@ class TestUser(unittest.TestCase):
                 'last_name': "George"
                 }
         self.assertDictEqual(user_dict, expected_dict)
+
 
 if __name__ == '__main__':
     unittest.main()

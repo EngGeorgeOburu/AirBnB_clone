@@ -7,6 +7,7 @@ import unittest
 from datetime import datetime
 from models import BaseModel
 
+
 class TestBaseModel(unittest.TestCase):
 
     def setUp(self):
@@ -17,7 +18,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_instance_creation(self):
         """
-        Test if an instance of the BaseModel is created 
+        Test if an instance of the BaseModel is created
         """
         self.assertIsInstance(self.base_model, BaseModel)
 
@@ -41,7 +42,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_save_method(self):
         """
-        Test if save method updates at updated_at 
+        Test if save method updates at updated_at
         """
         old_updated_at = self.base_model.updated_at
         self.base_model.save()
@@ -55,6 +56,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(obj_dict['__class__'], 'BaseModel')
         self.assertIsInstance(obj_dict['created_at'], str)
         self.assertIsInstance(obj_dict['updated_at'], str)
+
 
 if __name__ == '__main__':
     unittest.main()

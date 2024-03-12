@@ -10,11 +10,11 @@ from datetime import datetime
 from uuid import UUID
 from models import storage
 
+
 class TestAmenity(unittest.TestCase):
     """
     Test cases for the Amenity class.
     """
-
 
     def tes_init(self):
         """
@@ -28,7 +28,7 @@ class TestAmenity(unittest.TestCase):
         """
         Testing initialization of the amenity instance with arguements
         """
-        amenity = Amenity(name = "Testing Amenity")
+        amenity = Amenity(name="Testing Amenity")
         self.assertIsInstance(amenity, Amenity)
         self.assertEqual(amenity.name, "Testing Amenity"_)
 
@@ -61,10 +61,12 @@ class TestAmenity(unittest.TestCase):
 
     def test_str_representation(self):
         """
-        Testing the __str__method of Amenityinstance. 
+        Testing the __str__method of Amenityinstance.
         """
-        amenity = Amenity(name = "Testing Amenity")
-        self.assertEqual(str(amenity), "[Amenity] ({}) {}".format(amenity.id, amenity__dict__))
+        amenity = Amenity(name="Testing Amenity")
+        self.assertEqual(str(amenity), "[Amenity] ({}) {}".format(
+            amenity.id, amenity__dict__))
+
 
 if __name__ == '__main__':
     unittest.main()

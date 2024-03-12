@@ -7,13 +7,12 @@ from models.place import Place
 from models.base_model import BaseModel
 from datetime import datetime
 
+
 class TestBaseModel(unittest.TestCase):
     """
     Class for unittessting
     """
-
     my_obj = Place()
-    
 
     def setUp(self):
         """
@@ -33,7 +32,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_places(self):
         """
-        Test case for normal places 
+        Test case for normal places
         """
         obj = Place()
         obj.name = 'Nairobi'
@@ -66,6 +65,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(type(self.place_obj.latitude), float)
         self.assertEqual(type(self.place_obj.longitude), float)
         self.assertEqual(type(self.place_obj.amenity_ids), list)
+
 
 if __name__ == '__main__':
     unittest.main()

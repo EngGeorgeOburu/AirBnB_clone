@@ -16,8 +16,6 @@ class TestConsole(unittest.TestCase):
     """
     This is the test cases for the console module.
     """
-
-
     @patch('sys.stdout', new_callable=StringIO)
     def test_quit_command(self, mock_stdout):
         """
@@ -36,14 +34,14 @@ class TestConsole(unittest.TestCase):
         console.onecmd("EOF")
         self.assertEqual(mock_stdout.getvalue(), "")
 
-   @patch('sys.stdout', new_callable=StringIO)
-   def test_create_command(self, mock_stdout):
-       """
-       Test case for the create command
-       """
-       console = HBNBCommand()
-       console.onecmd("create BaseModel")
-       self.assertIsInstance(mock_stdout.getvalue(), str)
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_create_command(self, mock_stdout):
+        """
+        Test case for the create command
+        """
+    console = HBNBCommand()
+    console.onecmd("create BaseModel")
+    self.assertIsInstance(mock_stdout.getvalue(), str)
 
     @patch('sys.stdout', new_callable=StringIO)
     def test_show_command(self, mock_stdout):

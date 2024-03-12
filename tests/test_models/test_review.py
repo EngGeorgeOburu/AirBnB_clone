@@ -6,11 +6,11 @@ import unittest
 from models.base_model import BaseModel
 from models.review import Review
 
+
 class TestReview(unittest.TestCase):
     """
     Test cases for the Review class
     """
-    
     def test_inheritance(self):
         """
         Testing if the Review inherits from the BaseModel
@@ -58,6 +58,7 @@ class TestReview(unittest.TestCase):
                 'text': "This is a review text"
                 }
         self.assertDictEqual(review_dict, expected_dict)
+
 
 if __name__ == '__main__':
     unittest.main()

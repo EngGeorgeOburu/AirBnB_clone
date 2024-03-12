@@ -6,12 +6,12 @@ import unittest
 from models.base_model import BaseModel
 from models.state import State
 
+
 class TestState(unittest.TestCase):
     """
     Test cases for state class
     """
-    
-    def test_inheritance (self):
+    def test_inheritance(self):
         """
         Test if state inherits from the BaseModel
         """
@@ -52,4 +52,3 @@ class TestState(unittest.TestCase):
 
 if __name__ = '__main__':
     unittest.main()
-
