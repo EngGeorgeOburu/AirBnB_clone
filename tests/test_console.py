@@ -89,5 +89,6 @@ class TestConsole(unittest.TestCase):
         console.onecmd("update BaseModel")
         self.assertIsInstance(mock_stdout.getvalue(), str)
 
-    if __name__ == '__main__':
-        unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()
