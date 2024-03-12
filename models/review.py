@@ -6,6 +6,7 @@ Modelue for the review
 
 from models.base_model import BaseModel
 
+
 class Review(BaseModel):
     """
     Class review that inherits from BaseModel

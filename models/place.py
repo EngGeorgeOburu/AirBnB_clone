@@ -6,6 +6,7 @@ Module for place model
 
 from models.base_models import BaseModel
 
+
 class Place(BaseModel):
     """
     Class place that inherits from BaseModel

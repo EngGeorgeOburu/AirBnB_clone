@@ -5,6 +5,7 @@ Moule for the state
 
 from models.base_model import BaseModel
 
+
 class User(BasModel):
     """
     This is a class that represents a user.
