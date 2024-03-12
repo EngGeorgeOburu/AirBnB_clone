@@ -7,9 +7,16 @@ import sys
 import models
 import unittest
 from io import StringIO
-from unittest.mock import create_autospec
+from models import storage
+from unittest.mock import create_autospec, patch
 from console import HBNBCommand
-from unittest.mock import create_autospec
+from models.base_model import BaseModel
+from models.review import Review
+from models.place import Place
+from models.amenity import Amenity
+from models.city import City
+from models.state import State
+from models.user import User
 
 
 class TestConsole(unittest.TestCase):

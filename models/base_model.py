@@ -24,8 +24,8 @@ class BaseModel:
                 if key != "__classes__":
                     setattr(self, key, value)
                 if key == 'updated_at' or key == 'created_at':
-                    setattr(self, key, datetime.strptime(value, 
-                        '%Y-%m-%dT%H:%M:%S.%f'))
+                    setattr(self, key, datetime.strptime(
+                        value, '%Y-%m-%dT%H:%M:%S.%f'))
                 else:
                     setattr(self, key, value)
         else:
@@ -36,8 +36,8 @@ class BaseModel:
         """
         Prints a string representation of the base class.
         """
-        return "[{}] ({}) {}".format(self.__class__.__name__,
-                self.id, self.__dict__)
+        return "[{}] ({}) {}".format(
+                self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """

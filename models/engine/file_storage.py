@@ -7,7 +7,8 @@ import os.path
 from models.base_model import BaseModel
 from models.user import User
 
-class FileStorage(self):
+
+class FileStorage:
     """
     Handles both serialization and deserialization of instance to/from
     """
@@ -37,7 +38,7 @@ class FileStorage(self):
 
         with open(FileStorage.__file_path, "w") as file:
             json.dump(serialized_objs, file)
-    
+
     def reload(self):
         """
         Deserialize the JSON file to __objects
